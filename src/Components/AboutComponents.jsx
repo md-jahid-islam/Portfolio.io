@@ -248,5 +248,6 @@ import {
     </main>
   );
  };
-
+ 
+ // =========== Main Component =========== // 
  export default MainComponent;
