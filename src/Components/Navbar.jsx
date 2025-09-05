@@ -47,7 +47,7 @@
         ${darkMode ? "bg-[#000] text-[#A6E3E9]" : "bg-[#F8F9FA] text-[#000000]"}`}>
         <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
          <NavLink to="/home" className="inline-flex items-center"> 
-         <h1 className="">Zahid.Portfolioio</h1>
+         <h1 className="">Zahid.Portfolio.io</h1>
          </NavLink>
 
           {/* Mobile Menu */}
@@ -89,3 +89,6 @@
 
  //============   Navbar end ============//
  export default Navbar;
+ //  mnsdfksmndfk
+
+
