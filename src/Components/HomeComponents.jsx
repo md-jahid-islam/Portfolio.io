@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import Typewriter from 'typewriter-effect';
 import { FaFacebook, FaGithub } from 'react-icons/fa';
 import { IoLogoLinkedin } from 'react-icons/io';
@@ -119,4 +119,3 @@ import 'aos/dist/aos.css';
 
  //=========== Home Components end ============ //
  export default HomeComponents;
-//  jklhkjhjkklklklklklklkljk 

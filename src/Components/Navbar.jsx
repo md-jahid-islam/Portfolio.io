@@ -1,6 +1,5 @@
  import { 
- MoonIcon, SunIcon, HomeIcon, UserIcon, FolderIcon, 
- DocumentTextIcon, PhoneIcon
+ HomeIcon, UserIcon, FolderIcon, PhoneIcon
  } from "@heroicons/react/24/solid";
  import React, { useState, useEffect } from "react";
  import { GiSkills } from "react-icons/gi";
@@ -18,29 +17,8 @@
   // ======= Navbar useState start ========== //
   const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-   //=========== Theme Setup ==========//
-   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
-      document.body.style.backgroundColor = "#000"; 
-    }
-  }, []);
-
- //=========== Toggle Theme ==========//
-   const toggleTheme = () => {
-    const newMode = !darkMode;
-    setDarkMode(newMode);
-    document.documentElement.classList.toggle("dark", newMode);
-    document.body.style.backgroundColor = newMode ? "#000" : "#fff";
-    localStorage.setItem("theme", newMode ? "dark" : "light");
-  };
-
+  const [darkMode] = useState(false);
+  
   return (
     <>
       <nav className={`fixed w-full top-0 z-50 transition-colors duration-300 shadow-md py-4 
@@ -68,12 +46,6 @@
             ))}
           </ul>
 
-          {/* Theme & Mobile Toggle */}
-          <div className="flex items-center space-x-4">
-            <button className="text-gray-800 dark:text-white rounded-full transition-opacity" onClick={toggleTheme} aria-label="Toggle theme">
-            {darkMode ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
-            </button>
-
             {/* Mobile Menu Button */}
             <button className="md:hidden flex items-center text-gray-800 dark:text-white rounded-full transition-opacity hover:text-[#36C2CE] focus:outline-none" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle navigation menu">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +53,6 @@
             </svg>
             </button>
           </div>
-        </div>
       </nav>
     </>
   );
