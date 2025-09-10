@@ -109,9 +109,9 @@ import {
   const experiences = [
     {
       period: 'Creative It Institute — 2024',
-      title: 'Frontend Development (React)',
+      title: 'Frontend Development With React',
       description:
-        'Hands-on frontend experience using React, Redux, Tailwind CSS and Firebase. Focus on component architecture, responsive UI and accessibility.'
+        'Hands-on frontend experience using Html5, Css3, Javascript, React, Redux, Tailwind CSS and Firebase. Focus on component architecture, responsive UI and accessibility.'
     },
     {
       period: 'Creative It Institute — 2025',
@@ -125,7 +125,7 @@ import {
 
   return (
     <section className="mt-8 bg-white dark:bg-gray-900 rounded-2xl p-6 md:p-10 shadow-lg">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Experience</h2>
+      <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">My Learned Experience</h2>
       <div className="space-y-6">
         {experiences.map((exp, i) => (
           <motion.div
